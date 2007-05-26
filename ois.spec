@@ -11,18 +11,19 @@ Version:	1.0
 Release:	0.%{_rc}.1
 License:	zlib/libpng
 Group:		Libraries
-Source0:	http://dl.sourceforge.net/sourceforge/wgois/%{name}-%{version}%{_rc}.tar.gz
+Source0:	http://dl.sourceforge.net/wgois/%{name}-%{version}%{_rc}.tar.gz
 # Source0-md5:	05cbd131fb0477e1cbd4b115ccef2c90
 URL:		http://www.wreckedgames.com/wiki/index.php/WreckedLibs:OIS
 BuildRequires:	autoconf >= 2.5.0
 BuildRequires:	automake >= 1.6
-BuildRequires:	libtool >= 2:1.4
 BuildRequires:	libstdc++-devel
+BuildRequires:	libtool >= 2:1.4
 BuildRequires:	xorg-lib-libXaw-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The goal of OIS is shield the application programmer from having to rewrite input systems from scratch for each project.
+The goal of OIS is shield the application programmer from having to
+rewrite input systems from scratch for each project.
 
 %package devel
 Summary:	Header files for ois library
