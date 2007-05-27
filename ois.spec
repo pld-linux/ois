@@ -1,11 +1,10 @@
-# TODO:
-# - pl descryptions
 #
 # Conditional build:
 %bcond_without	static_libs	# don't build static library
 #
 %define _rc	RC1
 Summary:	Object Oriented Input System
+Summary(pl.UTF-8):	Zorientowany obiektowo system wejścia
 Name:		ois
 Version:	1.0
 Release:	0.%{_rc}.1
@@ -25,8 +24,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 The goal of OIS is shield the application programmer from having to
 rewrite input systems from scratch for each project.
 
+%description -l pl.UTF-8
+Celem projektu OIS jest ochrona twórcy aplikacji przed przepisywaniem
+na nowo systemów wejścia w każdym projekcie.
+
 %package devel
 Summary:	Header files for ois library
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki ois
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
@@ -34,13 +38,20 @@ Requires:	libstdc++-devel
 %description devel
 Header files for ois library.
 
+%description -l pl.UTF-8
+Pliki nagłówkowe biblioteki ois.
+
 %package static
 Summary:	Static ois library
+Summary(pl.UTF-8):	Statyczna biblioteka ois
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static ois library.
+
+%description -l pl.UTF-8
+Statyczna biblioteka ois.
 
 %prep
 %setup -q -n %{name}-%{version}%{_rc}
