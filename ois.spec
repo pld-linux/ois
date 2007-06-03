@@ -13,7 +13,7 @@ Group:		Libraries
 Source0:	http://dl.sourceforge.net/wgois/%{name}-%{version}%{_rc}.tar.gz
 # Source0-md5:	05cbd131fb0477e1cbd4b115ccef2c90
 URL:		http://www.wreckedgames.com/wiki/index.php/WreckedLibs:OIS
-BuildRequires:	autoconf >= 2.5.0
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1.6
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool >= 2:1.4
@@ -29,29 +29,30 @@ Celem projektu OIS jest ochrona twórcy aplikacji przed przepisywaniem
 na nowo systemów wejścia w każdym projekcie.
 
 %package devel
-Summary:	Header files for ois library
-Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki ois
+Summary:	Header files for OIS library
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki OIS
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
+Requires:	xorg-lib-libXaw-devel
 
 %description devel
-Header files for ois library.
+Header files for OIS library.
 
 %description -l pl.UTF-8
-Pliki nagłówkowe biblioteki ois.
+Pliki nagłówkowe biblioteki OIS.
 
 %package static
-Summary:	Static ois library
-Summary(pl.UTF-8):	Statyczna biblioteka ois
+Summary:	Static OIS library
+Summary(pl.UTF-8):	Statyczna biblioteka OIS
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
-Static ois library.
+Static OIS library.
 
 %description -l pl.UTF-8
-Statyczna biblioteka ois.
+Statyczna biblioteka OIS.
 
 %prep
 %setup -q -n %{name}-%{version}%{_rc}
@@ -80,17 +81,17 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*-*.*.*.so
+%attr(755,root,root) %{_libdir}/libOIS-*.*.*.so
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libOIS.so
-%{_libdir}/lib*.la
-%{_includedir}/*
-%{_pkgconfigdir}/*.pc
+%{_libdir}/libOIS.la
+%{_includedir}/OIS
+%{_pkgconfigdir}/OIS.pc
 
 %if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libOIS.a
 %endif
