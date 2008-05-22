@@ -2,16 +2,15 @@
 # Conditional build:
 %bcond_without	static_libs	# don't build static library
 #
-%define _rc	RC1
 Summary:	Object Oriented Input System
 Summary(pl.UTF-8):	Zorientowany obiektowo system wejścia
 Name:		ois
-Version:	1.0
-Release:	0.%{_rc}.1
+Version:	1.2.0
+Release:	0.1
 License:	zlib/libpng
 Group:		Libraries
-Source0:	http://dl.sourceforge.net/wgois/%{name}-%{version}%{_rc}.tar.gz
-# Source0-md5:	05cbd131fb0477e1cbd4b115ccef2c90
+Source0:	http://dl.sourceforge.net/wgois/%{name}_%{version}.tar.gz
+# Source0-md5:	6a8cedad04f095127ca1455162fec955
 URL:		http://www.wreckedgames.com/wiki/index.php/WreckedLibs:OIS
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1.6
@@ -55,7 +54,7 @@ Static OIS library.
 Statyczna biblioteka OIS.
 
 %prep
-%setup -q -n %{name}-%{version}%{_rc}
+%setup -q -n %{name}
 
 %build
 %{__libtoolize}
