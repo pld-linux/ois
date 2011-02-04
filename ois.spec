@@ -38,7 +38,7 @@ Requires:	xorg-lib-libXaw-devel
 %description devel
 Header files for OIS library.
 
-%description -l pl.UTF-8
+%description devel -l pl.UTF-8
 Pliki nagłówkowe biblioteki OIS.
 
 %package static
@@ -50,7 +50,7 @@ Requires:	%{name}-devel = %{version}-%{release}
 %description static
 Static OIS library.
 
-%description -l pl.UTF-8
+%description static -l pl.UTF-8
 Statyczna biblioteka OIS.
 
 %prep
