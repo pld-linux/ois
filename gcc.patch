@@ -1,0 +1,40 @@
+--- ois-v1-3/src/linux/LinuxJoyStickEvents.cpp~	2010-07-26 03:28:41.000000000 +0200
++++ ois-v1-3/src/linux/LinuxJoyStickEvents.cpp	2015-06-19 21:14:54.154198115 +0200
+@@ -33,6 +33,7 @@
+ #include <fcntl.h>        //Needed to Open a file descriptor
+ #include <cassert>	
+ #include <linux/input.h>
++#include <unistd.h>
+ 
+ 
+ #include <sstream>
+--- ois-v1-3/src/linux/LinuxForceFeedback.cpp~	2010-04-01 05:06:55.000000000 +0200
++++ ois-v1-3/src/linux/LinuxForceFeedback.cpp	2015-06-19 21:15:36.151765707 +0200
+@@ -26,6 +26,7 @@
+ #include <cstdlib>
+ #include <errno.h>
+ #include <memory.h>
++#include <unistd.h>
+ 
+ using namespace OIS;
+ 
+--- ois-v1-3/demos/OISConsole.cpp~	2010-08-16 00:51:34.000000000 +0200
++++ ois-v1-3/demos/OISConsole.cpp	2015-06-19 21:16:31.473579356 +0200
+@@ -12,6 +12,7 @@
+ #include <iostream>
+ #include <vector>
+ #include <sstream>
++#include <unistd.h>
+ 
+ ////////////////////////////////////Needed Windows Headers////////////
+ #if defined OIS_WIN32_PLATFORM
+--- ois-v1-3/demos/FFConsoleDemo.cpp~	2010-04-01 05:38:04.000000000 +0200
++++ ois-v1-3/demos/FFConsoleDemo.cpp	2015-06-19 21:16:50.240050195 +0200
+@@ -7,6 +7,7 @@
+ #include <ios>
+ #include <sstream>
+ #include <vector>
++#include <unistd.h>
+ 
+ using namespace std;
+ 

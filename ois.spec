@@ -7,11 +7,12 @@ Summary:	Object Oriented Input System
 Summary(pl.UTF-8):	Zorientowany obiektowo system wejścia
 Name:		ois
 Version:	1.3
-Release:	1
+Release:	2
 License:	zlib/libpng
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/wgois/%{name}_v%{file_version}.tar.gz
 # Source0-md5:	9697fead17eac6025151cd2e1fca1518
+Patch0:		gcc.patch
 URL:		http://ostatic.com/wgois/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1.6
@@ -56,6 +57,7 @@ Statyczna biblioteka OIS.
 
 %prep
 %setup -q -n %{name}-v%{file_version}
+%patch0 -p1
 
 %build
 %{__libtoolize}
