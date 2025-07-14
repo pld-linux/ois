@@ -57,7 +57,7 @@ Statyczna biblioteka OIS.
 
 %prep
 %setup -q -n %{name}-v%{file_version}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__libtoolize}
